@@ -1,0 +1,33 @@
+---
+const socialMedia = [
+  { name: "Twitter", url: "https://twitter.com", icon: "𝕏" },
+  {
+    name: "Facebook",
+    url: "https://facebook.com",
+    icon: '<img src="/facebook.svg" class="w-6 h-6" alt="Facebook">',
+  },
+  {
+    name: "Instagram",
+    url: "https://www.instagram.com/nagare_tattoo/",
+    icon: '<img src="/instagram.svg" class="w-6 h-6" alt="Instagram">',
+  },
+];
+---
+<div>
+    <h3 class="font-extrabold mb-4">Sígueme</h3>
+    <div class="flex flex-wrap gap-4">
+      {
+        socialMedia.map((platform) => (
+          <a
+            href={platform.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-2 px-2 py-2 rounded-lg hover:-translate-y-0.5 hover:text-red-900 transition-transform text-xl"
+            set:html={platform.icon}
+          >
+            <span>{platform.name}</span>
+          </a>
+        ))
+      }
+    </div>
+  </div>
