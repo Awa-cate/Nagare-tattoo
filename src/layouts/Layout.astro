@@ -7,8 +7,8 @@ const { title } = Astro.props;
 
 import "../styles/global.css";
 import Footer from "../components/Footer.astro";
-import Analytics from '@vercel/analytics/astro';
-import  SpeedInsights  from "@vercel/speed-insights/astro";
+import Analytics from "@vercel/analytics/astro";
+import SpeedInsights from "@vercel/speed-insights/astro";
 ---
 
 <!doctype html>
@@ -18,10 +18,11 @@ import  SpeedInsights  from "@vercel/speed-insights/astro";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/nagare tatto.svg" />
     <title>Nagare Tattoo</title>
+
+    <SpeedInsights />
+    <Analytics />
   </head>
   <body>
-    <SpeedInsights/>
-    <Analytics/>
     <slot />
     <Footer />
   </body>
