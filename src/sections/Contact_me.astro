@@ -1,30 +1,37 @@
 ---
 import Map from "../components/Map.astro";
 const phoneNumber = "+53 58386596";
-const whatsappNumber = phoneNumber.replace(/\D/g, '');
+const whatsappNumber = phoneNumber.replace(/\D/g, "");
 ---
 
 <section class="pt-20 pb-10">
-  <h1 class="uppercase font-extrabold text-4xl mb-5">Contáctame</h1>
-  <div class="grid grid-cols-2 gap-4">
-    <div class="phone-section">
+  <h1
+    class="uppercase font-extrabold text-3xl text-center md:text-start md:text-4xl mb-5"
+  >
+    Contáctame
+  </h1>
+  <div class="grid md:grid-cols-2 gap-4 text-center md:text-start">
+    <div class="md:border-0 md:mx-0 md:my-0 border-2 rounded-2xl mx-3 py-3">
       <h3 class="text-3xl font-extrabold mb-4">Phone</h3>
-      <p class="flex flex-col gap-2">
-        <a class="text-xl no-underline hover:underline" href={`tel:${whatsappNumber}`}>{phoneNumber}</a>
-        <a 
-            href={`https://wa.me/${whatsappNumber}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex text-xl items-center gap-2 text-green-600 hover:text-green-700 transition-colors"
-          >
-            <img src="whatsapp.svg" alt="WhatsApp">
-            Mensaje por WhatsApp
-          </a>
+      <p class="flex flex-col gap-2 items-center md:items-start">
+        <a
+          class="text-xl no-underline hover:underline"
+          href={`tel:${whatsappNumber}`}>{phoneNumber}</a
+        >
+        <a
+          href={`https://wa.me/${whatsappNumber}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex text-xl gap-2 text-green-600 hover:text-green-700 transition-colors"
+        >
+          <img src="whatsapp.svg" alt="WhatsApp" />
+          Mensaje por WhatsApp
+        </a>
       </p>
     </div>
 
     <div>
-      <h3 class="text-3xl font-extrabold mb-4">Loclización</h3>
+      <h3 class="text-3xl font-extrabold mb-4">Localización</h3>
       <h3 class="mb-2 text-xl">Ciudad de Holguín, Cuba</h3>
       <Map />
     </div>
