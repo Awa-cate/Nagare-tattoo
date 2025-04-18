@@ -7,7 +7,8 @@ const { title } = Astro.props;
 
 import "../styles/global.css";
 import Footer from "../components/Footer.astro";
-import Analytics from '@vercel/analytics/astro'
+import Analytics from '@vercel/analytics/astro';
+import  SpeedInsights  from "@vercel/speed-insights/astro";
 ---
 
 <!doctype html>
@@ -19,6 +20,7 @@ import Analytics from '@vercel/analytics/astro'
     <title>Nagare Tattoo</title>
   </head>
   <body>
+    <SpeedInsights/>
     <Analytics/>
     <slot />
     <Footer />
