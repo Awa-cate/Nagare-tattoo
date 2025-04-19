@@ -28,7 +28,7 @@ import SpeedInsights from "@vercel/speed-insights/astro";
   </body>
 </html>
 
-<style>
+<style is:global>
   html,
   body {
     background: #13151a;
@@ -37,5 +37,9 @@ import SpeedInsights from "@vercel/speed-insights/astro";
     width: 100%;
     height: 100%;
     color-scheme: dark light;
+  }
+
+  p strong {
+    color: red;
   }
 </style>
