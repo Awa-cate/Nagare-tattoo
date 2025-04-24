@@ -7,12 +7,14 @@ import Carrusel from "../components/Carrusel.astro";
 ---
 
 <Layout title="Nagare Tattoo">
-  <Hero />
-  <Carrusel />
-  <main class="mx-auto bg-gradient-to-b from-black">
-    <div class="max-w-6xl mx-auto">
+  <div class="bg-gradient-to-b to-gray-200">
+    <Hero />
+    <Carrusel />
+  </div>
+  <div class="bg-gradient-to-b from-gray-200 to-gray-400">
+    <main class="max-w-6xl mx-auto">
       <About_me />
       <Contact_me />
-    </div>
-  </main>
+    </main>
+  </div>
 </Layout>
